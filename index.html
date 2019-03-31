@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+h1,
+article {
+    text-align: center;
+}
+    </style>
+  </head>
+  <body>
+
+    <script>
+    function raffle(){
+        document.getElementById("start").style.display = "none";
+        document.getElementById("runner").style.display = "block";
+        all_tweets = document.getElementsByTagName("twitter-widget");
+
+        number_of_tweets = all_tweets.length;
+        current_tweet = 0;
+        for (let tweet of all_tweets) {
+            tweet.style.display = "none";
+        }
+        all_tweets[current_tweet].style.display = "block";
+
+        function rotate_tweets(){
+            all_tweets[current_tweet].style.display = "none";
+            current_tweet = (current_tweet + 1) % number_of_tweets;
+            all_tweets[current_tweet].style.display = "block";
+        }
+
+        rotating = setInterval(
+            rotate_tweets,
+            Math.floor(Math.random()*(400-300+1)+300)
+        );
+
+        setTimeout(
+            function() {
+                clearTimeout(rotating);
+                document.getElementById("runner").style.display = "none";
+                document.getElementById("winner").style.display = "block";
+            },
+            Math.floor(Math.random()*(5000-4000+1)+5000)
+        );
+    }
+    </script>
+    <div class="container-fluid">
+
+      <p class="btn btn-primary btn-lg btn-block" onclick="raffle();" id="start">Start</p>
+      <h1 style="display: none;" id="runner">Running ...</h1>
+      <h1 style="display: none;" id="winner">WINNER</h1>
+
+      <article>
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">Off to <a href="https://twitter.com/hashtag/collabw19?src=hash&amp;ref_src=twsrc%5Etfw">#collabw19</a> <a href="https://twitter.com/hashtag/collabw19reusablecup?src=hash&amp;ref_src=twsrc%5Etfw">#collabw19reusablecup</a> <a href="https://t.co/V3yZkHBAo2">pic.twitter.com/V3yZkHBAo2</a></p>&mdash; Paddy McCann ☘️🏴󠁧󠁢󠁳󠁣󠁴󠁿🇪🇺 (@paddymcc) <a href="https://twitter.com/paddymcc/status/1112352232400408581?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">On my way to <a href="https://twitter.com/SoftwareSaved?ref_src=twsrc%5Etfw">@SoftwareSaved</a> <a href="https://twitter.com/hashtag/CollabW19?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19</a> from the depths of Devon. I&#39;ll cheer up my 5hr+ journey with some nerdy facts...<a href="https://twitter.com/hashtag/CollabW19ReusableCup?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19ReusableCup</a><br><br>1/n <a href="https://t.co/DPhgQXg6lR">pic.twitter.com/DPhgQXg6lR</a></p>&mdash; Dr R Gilham (@rjjgilham) <a href="https://twitter.com/rjjgilham/status/1112331588946276353?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">On my way to <a href="https://twitter.com/hashtag/collabw19?src=hash&amp;ref_src=twsrc%5Etfw">#collabw19</a>, an amazing 3-day conf about software sustainability on research! My first conf ever that also helps the sustainability of the planet, by asking us to bring our own <a href="https://twitter.com/hashtag/CollabW19ReusableCup?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19ReusableCup</a> <a href="https://t.co/Uo2YYhAd16">pic.twitter.com/Uo2YYhAd16</a></p>&mdash; DVD (@DVDGC13) <a href="https://twitter.com/DVDGC13/status/1112312331315363840?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">On the way to <a href="https://twitter.com/hashtag/CollabW19?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19</a> - see you soon! <a href="https://twitter.com/hashtag/CollabW19ReusableCup?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19ReusableCup</a> <a href="https://t.co/cnxzgsc0lw">pic.twitter.com/cnxzgsc0lw</a></p>&mdash; CIRCA St Andrews (@CIRCA_StAndrews) <a href="https://twitter.com/CIRCA_StAndrews/status/1112300206983442432?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">Day bag for <a href="https://twitter.com/hashtag/collabw19?src=hash&amp;ref_src=twsrc%5Etfw">#collabw19</a> : laptop, notebook, mechanical keyboard, <a href="https://twitter.com/hashtag/CollabW19ReusableCup?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19ReusableCup</a> Can&#39;t wait :-D <a href="https://t.co/NOIJeRnGVP">pic.twitter.com/NOIJeRnGVP</a></p>&mdash; Adam J (@binarystate) <a href="https://twitter.com/binarystate/status/1112292646951809025?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">Me and my cup are ready. <a href="https://twitter.com/hashtag/CollabW19?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19</a> need to help me with the Monday Morning blues ...<br> <a href="https://twitter.com/hashtag/CollabW19ReusableCup?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19ReusableCup</a> <a href="https://t.co/F3mK74CQSb">pic.twitter.com/F3mK74CQSb</a></p>&mdash; Simperler-Consulting (@ASimConsulting) <a href="https://twitter.com/ASimConsulting/status/1112288682873155585?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="und" dir="ltr"> <a href="https://t.co/QYQZqNP3C7">pic.twitter.com/QYQZqNP3C7</a></p>&mdash; Stephan Druskat (@stdruskat) <a href="https://twitter.com/stdruskat/status/1112283813789487104?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+
+        <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">Ready for the 6 hour train journey to Loughborough for <a href="https://twitter.com/hashtag/collabw19?src=hash&amp;ref_src=twsrc%5Etfw">#collabw19</a>. Ready to share and learn with new collaborators and old friends. Thanks to <a href="https://twitter.com/figshare?ref_src=twsrc%5Etfw">@figshare</a> for the cup they gave me a couple of years ago - useful for daylight savings time recovery tea <a href="https://twitter.com/hashtag/CollabW19ReusableCup?src=hash&amp;ref_src=twsrc%5Etfw">#CollabW19ReusableCup</a> <a href="https://t.co/H3mDgWhPYY">pic.twitter.com/H3mDgWhPYY</a></p>&mdash; Neil P Chue Hong (@npch) <a href="https://twitter.com/npch/status/1112278635698884608?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+
+      </article>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </body>
+</html>
